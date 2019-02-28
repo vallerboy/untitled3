@@ -9,6 +9,19 @@ public class Methods {
         System.out.println(methods.isPrimeNumber(7));
         System.out.println(methods.maxOccursInArray());
 
+
+
+
+
+        int[] ints = {1,2,3,4,5,6,77,1,1,2,3,1};
+        int max = ints[0];
+
+        for (int anInt : ints) {
+            if(anInt > max){
+                max = anInt;
+            }
+        }
+
     }
     ////////////////////////////////////////////
 
