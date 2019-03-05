@@ -30,11 +30,16 @@ public class Task2 {
             System.out.print("Tekst: ");
             answer = scanner.nextLine();
 
+//            if(answer.equals("exit"))
+//                break;
+
             try {
                 Files.write(path, ("\n" + answer).getBytes(), StandardOpenOption.APPEND);
             } catch (IOException e) {
                 e.printStackTrace();
+                System.out.println("Nie udało sie zapisać do pliku!");
             }
+
         }while (!answer.equals("exit"));
     }
 }
