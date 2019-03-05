@@ -24,7 +24,8 @@ public class Monster {
      */
 
     public boolean attackPlayer(Player player){
-        if(chanceToAttack >= random.nextInt(100)){
+        int randomInt = random.nextInt(100);
+        if(chanceToAttack <= randomInt){
             return false;
         }
 

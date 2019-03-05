@@ -17,12 +17,14 @@ public class Player {
     }
 
     public boolean attackMonster(Monster monster){
-        if(chanceToCriticalAttack >= random.nextInt(100)){
-            return false;
+        int seed = random.nextInt(100);
+        if(chanceToCriticalAttack >= seed){
+            monster.setDef(0);
+            return true;
         }
 
         monster.setDef(monster.getDef() - this.getAttack());
-        return true;
+        return false;
     }
 
     public int getAttack() {
